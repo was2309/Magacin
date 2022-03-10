@@ -11,18 +11,40 @@ public class Magacin implements MagacinInterfejs {
 
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		artikli.add(artikal);
+
+		for(Artikal a:artikli) {
+			if(a.getSifra().equals(artikal.getSifra())) {
+				a.setKolicina(a.getKolicina()+1);
+				break;
+			}
+			else {
+				artikli.add(artikal);
+				break;
+			}
+		}
 
 	}
 
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
-		artikli.remove(artikal);
+		
+		for(Artikal a:artikli) {
+			if(a.getSifra().equals(artikal.getSifra()) && a.getKolicina()>0 ) {
+				a.setKolicina(a.getKolicina()-1);
+				break;
+			}
+			else {
+				artikli.remove(artikal);
+				break;
+			}
+		}
+
 
 	}
 
 	@Override
 	public Artikal vratiArtikal(Long sifra) {
+
 		if(sifra!=null) {
 			for(Artikal a:artikli) {
 				if(a.getSifra().equals(sifra)) {
