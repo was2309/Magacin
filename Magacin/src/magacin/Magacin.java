@@ -38,8 +38,6 @@ public class Magacin implements MagacinInterfejs {
 				break;
 			}
 		}
-
-
 	}
 
 	@Override
@@ -51,8 +49,7 @@ public class Magacin implements MagacinInterfejs {
 					return a;
 				}
 			}
-		}
-		
+		}		
 		return null;
 	}
 
