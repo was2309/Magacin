@@ -11,7 +11,8 @@ public class KucnaHemija extends Artikal {
 		return rokTrajanja;
 	}
 	public void setRokTrajanja(Date rokTrajanja) {
-		this.rokTrajanja = rokTrajanja;
+		if(rokTrajanja!=null && rokTrajanja.after(new Date()))
+			this.rokTrajanja = rokTrajanja;
 	}
 	@Override
 	public int hashCode() {

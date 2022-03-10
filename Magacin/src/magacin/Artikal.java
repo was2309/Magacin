@@ -12,28 +12,32 @@ public class Artikal {
 		return kolicina;
 	}
 	public void setKolicina(int kolicina) {
-		this.kolicina = kolicina;
+		if(kolicina>=0)
+			this.kolicina = kolicina;
 	}
 	
 	public String getNaziv() {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(naziv!=null)
+			this.naziv = naziv;
 	}
 	
 	public Long getSifra() {
 		return sifra;
 	}
 	public void setSifra(Long sifra) {
-		this.sifra = sifra;
+		if(sifra!=null && sifra>=0)
+			this.sifra = sifra;
 	}
 	
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
-		this.opis = opis;
+		if(opis!=null)
+			this.opis = opis;
 	}
 	
 	
